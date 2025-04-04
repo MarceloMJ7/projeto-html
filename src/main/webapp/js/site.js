@@ -15,14 +15,15 @@ function validaFaleConosco() {
         alert("Escolha o motivo do seu contato!");
         document.frmfaleconosco.selmotivo.focus();
         return false;
-    } else if (document.frmfaleconosco.motivo.value == "PR") {
-            alert("Escolha uma opção")
+
+    } else if (document.frmfaleconosco.selProduto && document.frmfaleconosco.selProduto.value == "") {
+        alert("Escolha uma opção");
         document.frmfaleconosco.selProduto.focus();
-        
         return false;
-    } else if (document.frmfaleconosco.comentario.value == "") {
+    }
+    else if (document.frmfaleconosco.txacomentario.value == "") {
         alert("Deixe seu comentário");
-        document.frmfaleconosco.comentario.focus();
+        document.frmfaleconosco.txacomentario.focus();
         return false;
     }
 
