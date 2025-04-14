@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site da Coldigo Geladeiras">
+    <meta name="keywords" content="Geladeiras, Frost-Free, Refrigeração">
+    <meta name="author" content="Escola Sistêmica">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Documento</title>
+    <link rel="stylesheet" href="../../css/site.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="../../imgs/logo.png" alt="Logo da coldigo geladeiras">
+        <h1>Coldigo Geladeiras</h1>
+    </header>
+    <nav>
+        <a href="../../index.html">
+            <div class="opcao">
+                <div>Inicio</div>
+            </div>
+        </a>
+        <a href="../site/produtos.html">
+            <div class="opcao">
+                <div>Produtos</div>
+            </div>
+        </a>
+        <a href="pages/site/faleconosco.html">
+            <div class="opcao">
+                <div>Fale Conosco</div>
+            </div>
+        </a>
+    </nav>
+    <section>
+        <h2>Fale Conosco</h2>
+        <p>Ficou com alguma dúvida? Preencha este formulário e entraremos em contato!</p>
+        <form name="frmfaleconosco" method="get" action="#" onsubmit="return validaFaleConosco()">
+            <fieldset class="faleConosco">
+                <legend>Dados Pessoais:</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" name="txtnome" id="nome" placeholder="Preencha Nome">
+                <label for="text">Telefone:</label>
+                <input type="number" name="txtfone" id="fone" placeholder="xxxxxxxxxxx">
+                <label for="email">E-Mail:</label>
+                <input type="email" name="txtemail" id="email">
+            </fieldset>
+            <fieldset class="faleConosco">
+                <legend>Motivo do Contato:</legend>
+                <label for="motivo1">Motivo: </label>
+                <select name="motivo" id="motivo" onchange="verificaMotivo(this.value)">
+                    <option value="Esc">Escolha</option>
+                    <option value="RE">Reclamação</option>
+                    <option value="SU">Sugestão</option>
+                    <option value="PR">Informação sobre produto</option>
+                </select>
+                <div id="opcaoProduto"></div>
+                <label for="comentario">Comentário</label>
+                <textarea name="comentario"></textarea>
+                <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="submit">Enviar</button>
+            </fieldset>
+
+        </form>
+    </section>
+    <footer>
+        copyright &copy; Escola Sistêmica 2019
+    </footer>
+    <script src="../../js/site.js"></script>
+</body>
+
+</html>
