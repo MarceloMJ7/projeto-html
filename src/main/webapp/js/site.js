@@ -60,3 +60,9 @@ function verificaMotivo(motivo) {
         }
     }
 }
+
+$(document).ready(function () {
+    $("header").load("/src/main/webapp/pages/site/general/cabecalho.html");
+    $("nav").load("/src/main/webapp/pages/site/general/menu.html");
+    $("footer").load("/src/main/webapp/pages/site/general/rodape.html");
+});
